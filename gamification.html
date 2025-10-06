@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central do Filiado - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">VRS</span>
+                <span class="navbar-logo-text">Vital Recife Suplementos</span>
+            </a>
+            <div class="navbar-menu">
+                <div class="dropdown">
+                    <button class="btn btn-ghost dropdown-toggle">👤 João Silva</button>
+                    <div class="dropdown-menu">
+                        <a href="user-area.html" class="dropdown-item">📊 Área do Usuário</a>
+                        <a href="gamification.html" class="dropdown-item">🏆 Gamificação</a>
+                        <a href="referral.html" class="dropdown-item">🎁 Indicações</a>
+                        <a href="profile.html" class="dropdown-item">👤 Perfil</a>
+                        <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid var(--border);">
+                        <a href="index.html" class="dropdown-item">🚪 Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(to right, var(--primary), #9acd32);">
+        <div class="hero-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1>Central do Filiado</h1>
+                <p>Seu sucesso está a um passo de distância!</p>
+            </div>
+            <div class="badge" style="background-color: #9ca3af; color: white; padding: 0.5rem 1rem; font-size: 1.125rem;">
+                Status: Silver
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="card" style="border: 2px solid var(--primary);">
+                <div class="card-content">
+                    <div style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.5rem;">👥 Indicações</div>
+                    <div style="font-size: 2rem; font-weight: bold;">3</div>
+                    <div style="font-size: 0.75rem; color: var(--muted-foreground);">pessoas indicadas</div>
+                </div>
+            </div>
+
+            <div class="card" style="border: 2px solid #22c55e;">
+                <div class="card-content">
+                    <div style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.5rem;">🎁 Cashback</div>
+                    <div style="font-size: 2rem; font-weight: bold; color: #22c55e;">R$ 85,50</div>
+                    <div style="font-size: 0.75rem; color: var(--muted-foreground);">disponível</div>
+                </div>
+            </div>
+
+            <div class="card" style="border: 2px solid #3b82f6;">
+                <div class="card-content">
+                    <div style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.5rem;">⚡ Engajamento</div>
+                    <div style="font-size: 2rem; font-weight: bold; color: #3b82f6;">75%</div>
+                    <div style="font-size: 0.75rem; color: var(--muted-foreground);">meta: 70%</div>
+                </div>
+            </div>
+
+            <div class="card" style="border: 2px solid #a855f7;">
+                <div class="card-content">
+                    <div style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.5rem;">🥈 Status</div>
+                    <div style="font-size: 2rem; font-weight: bold; color: #a855f7;">Silver</div>
+                    <div style="font-size: 0.75rem; color: var(--muted-foreground);">nível atual</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Engagement -->
+        <div class="card" style="background: linear-gradient(to right, var(--primary), #9acd32); color: var(--primary-foreground); margin-bottom: 2rem;">
+            <div class="card-header">
+                <h2 class="card-title">Engajamento Semanal</h2>
+            </div>
+            <div class="card-content">
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>Progresso Atual</span>
+                        <span style="font-weight: bold;">75%</span>
+                    </div>
+                    <div class="progress-bar-bg" style="background-color: rgba(255, 255, 255, 0.3);">
+                        <div class="progress-bar" style="width: 75%; background: white;"></div>
+                    </div>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem; opacity: 0.9;">
+                        🎉 Parabéns! Você atingiu a meta semanal!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Challenges -->
+        <h2 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Desafios Semanais com Cashback</h2>
+        <div class="challenge-grid">
+            <!-- Challenge 1 -->
+            <div class="challenge-card">
+                <div class="challenge-header">
+                    <div class="challenge-icon" style="background: linear-gradient(to bottom right, #a855f7, #9333ea);">
+                        👥
+                    </div>
+                    <div class="challenge-info">
+                        <h3>Filiado Platinum - Indicações</h3>
+                        <p class="challenge-description">Indicar 5 novos filiados</p>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span style="font-size: 0.875rem; font-weight: 500;">Progresso</span>
+                        <span style="font-size: 0.875rem; font-weight: bold;">3 / 5</span>
+                    </div>
+                    <div class="progress-bar-bg" style="height: 0.5rem;">
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="challenge-rewards">
+                    <div class="reward-item">
+                        <div class="reward-label">Pontos</div>
+                        <div class="reward-value">800</div>
+                    </div>
+                    <div style="width: 1px; height: 2rem; background-color: var(--border);"></div>
+                    <div class="reward-item">
+                        <div class="reward-label">Cashback</div>
+                        <div class="reward-value cashback">R$ 25,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge 2 -->
+            <div class="challenge-card">
+                <div class="challenge-header">
+                    <div class="challenge-icon" style="background: linear-gradient(to bottom right, #fbbf24, #f59e0b);">
+                        🎯
+                    </div>
+                    <div class="challenge-info">
+                        <h3>Engajamento Semanal Gold</h3>
+                        <p class="challenge-description">Manter 70%+ de engajamento</p>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span style="font-size: 0.875rem; font-weight: 500;">Progresso</span>
+                        <span style="font-size: 0.875rem; font-weight: bold;">75 / 70</span>
+                    </div>
+                    <div class="progress-bar-bg" style="height: 0.5rem;">
+                        <div class="progress-bar" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="challenge-rewards">
+                    <div class="reward-item">
+                        <div class="reward-label">Pontos</div>
+                        <div class="reward-value">300</div>
+                    </div>
+                    <div style="width: 1px; height: 2rem; background-color: var(--border);"></div>
+                    <div class="reward-item">
+                        <div class="reward-label">Cashback</div>
+                        <div class="reward-value cashback">R$ 15,00</div>
+                    </div>
+                    <span class="badge badge-success" style="position: absolute; top: 1rem; right: 1rem;">Completo!</span>
+                </div>
+            </div>
+
+            <!-- Challenge 3 -->
+            <div class="challenge-card">
+                <div class="challenge-header">
+                    <div class="challenge-icon" style="background: linear-gradient(to bottom right, #22c55e, #16a34a);">
+                        📈
+                    </div>
+                    <div class="challenge-info">
+                        <h3>Vendas em Equipe</h3>
+                        <p class="challenge-description">Rede realizar 10 vendas</p>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span style="font-size: 0.875rem; font-weight: 500;">Progresso</span>
+                        <span style="font-size: 0.875rem; font-weight: bold;">6 / 10</span>
+                    </div>
+                    <div class="progress-bar-bg" style="height: 0.5rem;">
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="challenge-rewards">
+                    <div class="reward-item">
+                        <div class="reward-label">Pontos</div>
+                        <div class="reward-value">600</div>
+                    </div>
+                    <div style="width: 1px; height: 2rem; background-color: var(--border);"></div>
+                    <div class="reward-item">
+                        <div class="reward-label">Cashback</div>
+                        <div class="reward-value cashback">R$ 35,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge 4 -->
+            <div class="challenge-card">
+                <div class="challenge-header">
+                    <div class="challenge-icon" style="background: linear-gradient(to bottom right, #3b82f6, #2563eb);">
+                        📱
+                    </div>
+                    <div class="challenge-info">
+                        <h3>Interação Social</h3>
+                        <p class="challenge-description">Compartilhar 15 vezes nas redes</p>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span style="font-size: 0.875rem; font-weight: 500;">Progresso</span>
+                        <span style="font-size: 0.875rem; font-weight: bold;">8 / 15</span>
+                    </div>
+                    <div class="progress-bar-bg" style="height: 0.5rem;">
+                        <div class="progress-bar" style="width: 53%;"></div>
+                    </div>
+                </div>
+                <div class="challenge-rewards">
+                    <div class="reward-item">
+                        <div class="reward-label">Pontos</div>
+                        <div class="reward-value">250</div>
+                    </div>
+                    <div style="width: 1px; height: 2rem; background-color: var(--border);"></div>
+                    <div class="reward-item">
+                        <div class="reward-label">Cashback</div>
+                        <div class="reward-value cashback">R$ 10,00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level System -->
+        <div class="card" style="margin-top: 2rem;">
+            <div class="card-header">
+                <h2 class="card-title">Sistema de Níveis</h2>
+            </div>
+            <div class="card-content">
+                <div class="level-grid">
+                    <div class="level-card bronze">
+                        <div class="level-icon bronze">🥉</div>
+                        <div class="level-info">
+                            <h3>Bronze</h3>
+                            <p>Filiado iniciante (padrão)</p>
+                        </div>
+                    </div>
+                    <div class="level-card silver">
+                        <div class="level-icon silver">🥈</div>
+                        <div class="level-info">
+                            <h3>Silver</h3>
+                            <p>3+ indicações ativas</p>
+                        </div>
+                    </div>
+                    <div class="level-card gold">
+                        <div class="level-icon gold">🥇</div>
+                        <div class="level-info">
+                            <h3>Gold</h3>
+                            <p>5+ indicações ativas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

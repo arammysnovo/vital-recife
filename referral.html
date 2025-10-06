@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Filiado VIP - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">VRS</span>
+                <span class="navbar-logo-text">Vital Recife Suplementos</span>
+            </a>
+            <div class="navbar-menu">
+                <div class="dropdown">
+                    <button class="btn btn-ghost dropdown-toggle">👤 João Silva</button>
+                    <div class="dropdown-menu">
+                        <a href="user-area.html" class="dropdown-item">📊 Área do Usuário</a>
+                        <a href="gamification.html" class="dropdown-item">🏆 Gamificação</a>
+                        <a href="referral.html" class="dropdown-item">🎁 Indicações</a>
+                        <a href="profile.html" class="dropdown-item">👤 Perfil</a>
+                        <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid var(--border);">
+                        <a href="index.html" class="dropdown-item">🚪 Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(to right, #a855f7, #9333ea);">
+        <div class="hero-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1>Programa Filiado VIP</h1>
+                <p>Indique amigos e ganhe cashback em cada venda!</p>
+            </div>
+            <div class="badge" style="background-color: white; color: #a855f7; padding: 0.5rem 1rem; font-size: 1.125rem; font-weight: bold;">
+                Status: Silver
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Progress to Next Level -->
+        <div class="card" style="border: 2px solid var(--primary); margin-bottom: 2rem;">
+            <div class="card-header">
+                <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                    📈 Progresso para o Próximo Nível
+                </h2>
+            </div>
+            <div class="card-content">
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>Nível Atual: <strong>Silver</strong></span>
+                        <span>Próximo Nível: <strong>Gold</strong></span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-top: 0.5rem;">
+                        Faltam 2 indicações para alcançar o nível Gold
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level Benefits -->
+        <div class="level-grid" style="margin-bottom: 2rem;">
+            <div class="level-card bronze">
+                <div class="level-icon bronze">🥉</div>
+                <div class="level-info">
+                    <h3>Bronze</h3>
+                    <ul style="font-size: 0.875rem; margin-top: 0.5rem; padding-left: 1.25rem;">
+                        <li>R$ 15,00 por indicação</li>
+                        <li>2% cashback mensal</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-card silver" style="border-width: 3px;">
+                <div class="level-icon silver">🥈</div>
+                <div class="level-info">
+                    <h3>Silver (3+ indicações)</h3>
+                    <ul style="font-size: 0.875rem; margin-top: 0.5rem; padding-left: 1.25rem;">
+                        <li>R$ 20,00 por indicação</li>
+                        <li>3% cashback mensal</li>
+                        <li>15% desconto em produtos</li>
+                        <li>Material exclusivo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-card gold">
+                <div class="level-icon gold">🥇</div>
+                <div class="level-info">
+                    <h3>Gold (5+ indicações)</h3>
+                    <ul style="font-size: 0.875rem; margin-top: 0.5rem; padding-left: 1.25rem;">
+                        <li>R$ 25,00 por indicação</li>
+                        <li>5% cashback mensal</li>
+                        <li>25% desconto em produtos</li>
+                        <li>Eventos exclusivos</li>
+                        <li>Consultor pessoal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referral Link -->
+        <div class="referral-link-section">
+            <h2>Seu Link de Indicação</h2>
+            <div class="referral-input-group">
+                <input type="text" id="referralLink" class="form-input" value="https://vitalrecife.com/ref/VRS123ABC" readonly>
+                <button class="btn" onclick="copyReferralLink()">📋 Copiar</button>
+                <button class="btn" onclick="shareReferralLink()">📤 Compartilhar</button>
+            </div>
+            <p class="referral-note">
+                Compartilhe este link com seus amigos e ganhe R$ 20,00 por cada indicação!
+            </p>
+        </div>
+
+        <!-- History Sections -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+            <!-- Referral History -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                        🎁 Histórico de Indicações
+                    </h2>
+                </div>
+                <div class="card-content">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Ganhos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maria Santos</td>
+                                <td>15/01/2024</td>
+                                <td><span class="status-badge active">✓ Ativo</span></td>
+                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
+                            </tr>
+                            <tr>
+                                <td>Pedro Costa</td>
+                                <td>20/01/2024</td>
+                                <td><span class="status-badge active">✓ Ativo</span></td>
+                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
+                            </tr>
+                            <tr>
+                                <td>Ana Lima</td>
+                                <td>01/02/2024</td>
+                                <td><span class="status-badge pending">⏱ Pendente</span></td>
+                                <td style="font-weight: bold;">R$ 0,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Click History -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                        📈 Cliques Recentes
+                    </h2>
+                </div>
+                <div class="card-content">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Origem</th>
+                                <th>Cliques</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>28/02/2024</td>
+                                <td>Instagram</td>
+                                <td style="font-size: 1.25rem; font-weight: bold; color: #3b82f6;">15</td>
+                            </tr>
+                            <tr>
+                                <td>27/02/2024</td>
+                                <td>WhatsApp</td>
+                                <td style="font-size: 1.25rem; font-weight: bold; color: #3b82f6;">8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cashback & Withdraw -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <!-- Cashback History -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                        💰 Histórico de Cashback
+                    </h2>
+                </div>
+                <div class="card-content">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15/02/2024</td>
+                                <td>Indicação: Maria Santos</td>
+                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
+                                <td><span class="status-badge active">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>20/02/2024</td>
+                                <td>Indicação: Pedro Costa</td>
+                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
+                                <td><span class="status-badge active">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>25/02/2024</td>
+                                <td>Cashback mensal 2%</td>
+                                <td style="font-weight: bold; color: #22c55e;">R$ 15,50</td>
+                                <td><span class="status-badge active">Aprovado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Withdraw Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Solicitar Saque</h2>
+                </div>
+                <div class="card-content">
+                    <div class="withdraw-section">
+                        <p class="withdraw-balance">Saldo Disponível</p>
+                        <p class="withdraw-amount">R$ 85,50</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Valor do Saque</label>
+                        <input type="number" class="form-input" placeholder="Mínimo R$ 50,00" min="50" step="0.01">
+                    </div>
+                    <button class="btn btn-full" style="background-color: #22c55e; color: white;">
+                        Solicitar Saque
+                    </button>
+                    <p style="font-size: 0.75rem; color: var(--muted-foreground); text-align: center; margin-top: 0.5rem;">
+                        Valor mínimo para saque: R$ 50,00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="card auth-card">
+            <div class="card-content">
+                <div class="auth-header">
+                    <h1 class="auth-title">Criar Conta</h1>
+                    <p class="auth-description">Preencha os dados abaixo para criar sua conta</p>
+                </div>
+
+                <form action="user-area.html" method="get">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome Completo</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="João Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(81) 99999-9999" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirmar Senha</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Cadastrar</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Já tem uma conta? 
+                        <a href="login.html" class="auth-link">Entrar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

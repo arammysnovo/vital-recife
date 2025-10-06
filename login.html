@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="card auth-card">
+            <div class="card-content">
+                <div class="auth-header">
+                    <h1 class="auth-title">Entrar</h1>
+                    <p class="auth-description">Entre com sua conta para acessar a plataforma</p>
+                </div>
+
+                <form action="user-area.html" method="get">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+
+                    <div style="text-align: right; margin-bottom: 1rem;">
+                        <a href="reset-password.html" class="auth-link" style="font-size: 0.875rem;">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Não tem uma conta? 
+                        <a href="register.html" class="auth-link">Cadastre-se</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

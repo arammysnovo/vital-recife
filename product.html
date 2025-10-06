@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whey Protein Concentrado - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">VRS</span>
+                <span class="navbar-logo-text">Vital Recife Suplementos</span>
+            </a>
+            <div class="navbar-menu">
+                <a href="login.html" class="btn btn-ghost">Entrar</a>
+                <a href="register.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <a href="index.html" class="back-link">← Voltar para a loja</a>
+
+        <div class="product-detail-grid">
+            <!-- Product Images -->
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=800&h=800&fit=crop" alt="Whey Protein Concentrado" id="mainImage">
+                </div>
+                <div class="thumbnail-grid">
+                    <div class="thumbnail active">
+                        <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=200&h=200&fit=crop" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=200&h=200&fit=crop" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=200&h=200&fit=crop" alt="Thumbnail 3">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=200&h=200&fit=crop" alt="Thumbnail 4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <span class="product-category">Whey Protein</span>
+                <h1 class="product-detail-title">Whey Protein Concentrado</h1>
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <span class="product-reviews">4.8 (245 avaliações)</span>
+                </div>
+
+                <div class="product-price-section">
+                    <span class="product-old-price">R$ 119,90</span>
+                    <span class="product-price">R$ 89,90</span>
+                    <span class="badge badge-success">Economize R$ 30,00</span>
+                </div>
+
+                <div class="product-stock">
+                    📦 45 unidades em estoque
+                </div>
+
+                <div class="quantity-section">
+                    <label class="form-label">Quantidade</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decrementQuantity()">−</button>
+                        <input type="number" id="quantity" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                        <button class="btn btn-primary" onclick="addToCart()" style="flex: 1; margin-left: 1rem;">
+                            🛒 Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-benefits">
+                    <div class="benefit-item">✓ Frete grátis para compras acima de R$ 150,00</div>
+                    <div class="benefit-item">✓ Entrega em até 5 dias úteis</div>
+                    <div class="benefit-item">✓ Garantia de qualidade</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description" onclick="switchTab('description')">Descrição</button>
+                <button class="tab-btn" data-tab="ingredients" onclick="switchTab('ingredients')">Ingredientes</button>
+                <button class="tab-btn" data-tab="howToUse" onclick="switchTab('howToUse')">Como Usar</button>
+                <button class="tab-btn" data-tab="reviews" onclick="switchTab('reviews')">Avaliações</button>
+            </div>
+            
+            <div class="tabs-content">
+                <div id="description" class="tab-content">
+                    <div class="card">
+                        <div class="card-content">
+                            <p>Whey Protein de alta qualidade com 24g de proteína por dose. Ideal para ganho de massa muscular e recuperação pós-treino.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="ingredients" class="tab-content hidden">
+                    <div class="card">
+                        <div class="card-content">
+                            <p>Proteína concentrada do soro do leite, cacau em pó, aromatizantes, edulcorantes sucralose e acessulfame-K.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="howToUse" class="tab-content hidden">
+                    <div class="card">
+                        <div class="card-content">
+                            <p>Misture 30g (1 dosador) em 200ml de água ou leite. Consumir até 2 porções ao dia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="reviews" class="tab-content hidden">
+                    <div class="card">
+                        <div class="card-content">
+                            <p style="text-align: center; color: var(--muted-foreground); padding: 2rem 0;">
+                                Seja o primeiro a avaliar este produto!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <h2>Produtos Relacionados</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1622484211850-cc1f8c6d3f3e?w=500&h=500&fit=crop" alt="Whey Protein Isolado" class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Whey Protein Isolado</h3>
+                        <p class="product-price">R$ 149,90</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?w=500&h=500&fit=crop" alt="Creatina Monohidratada" class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Creatina Monohidratada</h3>
+                        <p class="product-price">R$ 59,90</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&h=500&fit=crop" alt="BCAA 2:1:1" class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">BCAA 2:1:1</h3>
+                        <p class="product-price">R$ 69,90</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=500&fit=crop" alt="Pre-Workout Explosive" class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Pre-Workout Explosive</h3>
+                        <p class="product-price">R$ 79,90</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
