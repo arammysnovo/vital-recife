@@ -3,269 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programa Filiado VIP - Vital Recife Suplementos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Indicação VIP - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="dashboard_layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="navbar-logo">
-                <span class="navbar-logo-icon">VRS</span>
-                <span class="navbar-logo-text">Vital Recife Suplementos</span>
-            </a>
-            <div class="navbar-menu">
-                <div class="dropdown">
-                    <button class="btn btn-ghost dropdown-toggle">👤 João Silva</button>
-                    <div class="dropdown-menu">
-                        <a href="user-area.html" class="dropdown-item">📊 Área do Usuário</a>
-                        <a href="gamification.html" class="dropdown-item">🏆 Gamificação</a>
-                        <a href="referral.html" class="dropdown-item">🎁 Indicações</a>
-                        <a href="profile.html" class="dropdown-item">👤 Perfil</a>
-                        <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid var(--border);">
-                        <a href="index.html" class="dropdown-item">🚪 Sair</a>
-                    </div>
-                </div>
+
+    <header class="navbar">
+        <div class="container">
+            <img src="logo.jpeg" alt="Logo Vital Recife" class="logo">
+            <nav>
+                <a href="ecommerce.html">Catálogo</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="gamification.html">Gamificação</a>
+                <a href="referral.html" class="active">Indicação</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+            <div class="user-menu">
+                <span>Olá, Usuário!</span>
+                <img src="https://i.pravatar.cc/40" alt="Avatar do Usuário" class="avatar">
+            </div>
+            <div class="mobile-menu-icon">
+                <span class="material-symbols-outlined">menu</span>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(to right, #a855f7, #9333ea);">
-        <div class="hero-container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
+    <main class="container main-content">
+        <div class="dashboard-layout">
+            <aside class="sidebar">
+                <h3>Minha Conta</h3>
+                <nav>
+                    <a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span> Dashboard</a>
+                    <a href="gamification.html"><span class="material-symbols-outlined">sports_esports</span> Gamificação</a>
+                    <a href="referral.html" class="active"><span class="material-symbols-outlined">share</span> Indicação VIP</a>
+                    <a href="profile.html"><span class="material-symbols-outlined">person</span> Meu Perfil</a>
+                    <a href="#"><span class="material-symbols-outlined">logout</span> Sair</a>
+                </nav>
+            </aside>
+            <section class="dashboard-content">
                 <h1>Programa Filiado VIP</h1>
-                <p>Indique amigos e ganhe cashback em cada venda!</p>
-            </div>
-            <div class="badge" style="background-color: white; color: #a855f7; padding: 0.5rem 1rem; font-size: 1.125rem; font-weight: bold;">
-                Status: Silver
-            </div>
-        </div>
-    </section>
+                <p class="text-muted">Compartilhe seu link e convide amigos para ganhar recompensas exclusivas!</p>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Progress to Next Level -->
-        <div class="card" style="border: 2px solid var(--primary); margin-bottom: 2rem;">
-            <div class="card-header">
-                <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                    📈 Progresso para o Próximo Nível
-                </h2>
-            </div>
-            <div class="card-content">
-                <div class="progress-container">
-                    <div class="progress-header">
-                        <span>Nível Atual: <strong>Silver</strong></span>
-                        <span>Próximo Nível: <strong>Gold</strong></span>
+                <h3 style="margin-top: 30px;">Seu Código de Indicação</h3>
+                <div class="referral-code-display">
+                    <input type="text" value="VITALRECIFE2025" readonly>
+                    <button>Copiar</button>
+                </div>
+                <p class="text-muted" style="margin-top: 10px;">Compartilhe este código com seus amigos para que eles se cadastrem e você comece a ganhar!</p>
+
+                <h3 style="margin-top: 40px;">Seu Status Atual: <span class="primary-color">Gold</span></h3>
+                <p class="text-muted">Faltam 3 indicações ativas para o próximo nível (Platinum)!</p>
+                <div class="progress-bar-container" style="margin-top: 20px;">
+                    <div class="progress-bar" style="width: 70%;">70% para Platinum</div>
+                </div>
+
+                <h3 style="margin-top: 40px;">Benefícios por Nível</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h4>Bronze</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">check_circle</span> R$ 15,00 por indicação</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> 2% cashback mensal</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Suporte prioritário</li>
+                        </ul>
                     </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar" style="width: 60%;"></div>
+                    <div class="benefit-card">
+                        <h4>Silver</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">check_circle</span> R$ 20,00 por indicação</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> 3% cashback mensal</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> 15% desconto em produtos</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Material exclusivo</li>
+                        </ul>
                     </div>
-                    <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-top: 0.5rem;">
-                        Faltam 2 indicações para alcançar o nível Gold
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Level Benefits -->
-        <div class="level-grid" style="margin-bottom: 2rem;">
-            <div class="level-card bronze">
-                <div class="level-icon bronze">🥉</div>
-                <div class="level-info">
-                    <h3>Bronze</h3>
-                    <ul style="font-size: 0.875rem; margin-top: 0.5rem; padding-left: 1.25rem;">
-                        <li>R$ 15,00 por indicação</li>
-                        <li>2% cashback mensal</li>
-                        <li>Suporte prioritário</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="level-card silver" style="border-width: 3px;">
-                <div class="level-icon silver">🥈</div>
-                <div class="level-info">
-                    <h3>Silver (3+ indicações)</h3>
-                    <ul style="font-size: 0.875rem; margin-top: 0.5rem; padding-left: 1.25rem;">
-                        <li>R$ 20,00 por indicação</li>
-                        <li>3% cashback mensal</li>
-                        <li>15% desconto em produtos</li>
-                        <li>Material exclusivo</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="level-card gold">
-                <div class="level-icon gold">🥇</div>
-                <div class="level-info">
-                    <h3>Gold (5+ indicações)</h3>
-                    <ul style="font-size: 0.875rem; margin-top: 0.5rem; padding-left: 1.25rem;">
-                        <li>R$ 25,00 por indicação</li>
-                        <li>5% cashback mensal</li>
-                        <li>25% desconto em produtos</li>
-                        <li>Eventos exclusivos</li>
-                        <li>Consultor pessoal</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Referral Link -->
-        <div class="referral-link-section">
-            <h2>Seu Link de Indicação</h2>
-            <div class="referral-input-group">
-                <input type="text" id="referralLink" class="form-input" value="https://vitalrecife.com/ref/VRS123ABC" readonly>
-                <button class="btn" onclick="copyReferralLink()">📋 Copiar</button>
-                <button class="btn" onclick="shareReferralLink()">📤 Compartilhar</button>
-            </div>
-            <p class="referral-note">
-                Compartilhe este link com seus amigos e ganhe R$ 20,00 por cada indicação!
-            </p>
-        </div>
-
-        <!-- History Sections -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
-            <!-- Referral History -->
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                        🎁 Histórico de Indicações
-                    </h2>
-                </div>
-                <div class="card-content">
-                    <table class="history-table">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Data</th>
-                                <th>Status</th>
-                                <th>Ganhos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Maria Santos</td>
-                                <td>15/01/2024</td>
-                                <td><span class="status-badge active">✓ Ativo</span></td>
-                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
-                            </tr>
-                            <tr>
-                                <td>Pedro Costa</td>
-                                <td>20/01/2024</td>
-                                <td><span class="status-badge active">✓ Ativo</span></td>
-                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
-                            </tr>
-                            <tr>
-                                <td>Ana Lima</td>
-                                <td>01/02/2024</td>
-                                <td><span class="status-badge pending">⏱ Pendente</span></td>
-                                <td style="font-weight: bold;">R$ 0,00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Click History -->
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                        📈 Cliques Recentes
-                    </h2>
-                </div>
-                <div class="card-content">
-                    <table class="history-table">
-                        <thead>
-                            <tr>
-                                <th>Data</th>
-                                <th>Origem</th>
-                                <th>Cliques</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>28/02/2024</td>
-                                <td>Instagram</td>
-                                <td style="font-size: 1.25rem; font-weight: bold; color: #3b82f6;">15</td>
-                            </tr>
-                            <tr>
-                                <td>27/02/2024</td>
-                                <td>WhatsApp</td>
-                                <td style="font-size: 1.25rem; font-weight: bold; color: #3b82f6;">8</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cashback & Withdraw -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-            <!-- Cashback History -->
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                        💰 Histórico de Cashback
-                    </h2>
-                </div>
-                <div class="card-content">
-                    <table class="history-table">
-                        <thead>
-                            <tr>
-                                <th>Data</th>
-                                <th>Descrição</th>
-                                <th>Valor</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>15/02/2024</td>
-                                <td>Indicação: Maria Santos</td>
-                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
-                                <td><span class="status-badge active">Aprovado</span></td>
-                            </tr>
-                            <tr>
-                                <td>20/02/2024</td>
-                                <td>Indicação: Pedro Costa</td>
-                                <td style="font-weight: bold; color: #22c55e;">R$ 25,00</td>
-                                <td><span class="status-badge active">Aprovado</span></td>
-                            </tr>
-                            <tr>
-                                <td>25/02/2024</td>
-                                <td>Cashback mensal 2%</td>
-                                <td style="font-weight: bold; color: #22c55e;">R$ 15,50</td>
-                                <td><span class="status-badge active">Aprovado</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Withdraw Section -->
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title">Solicitar Saque</h2>
-                </div>
-                <div class="card-content">
-                    <div class="withdraw-section">
-                        <p class="withdraw-balance">Saldo Disponível</p>
-                        <p class="withdraw-amount">R$ 85,50</p>
+                    <div class="benefit-card">
+                        <h4>Gold</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">check_circle</span> R$ 25,00 por indicação</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> 5% cashback mensal</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> 25% desconto em produtos</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Eventos exclusivos</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Consultor pessoal</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Valor do Saque</label>
-                        <input type="number" class="form-input" placeholder="Mínimo R$ 50,00" min="50" step="0.01">
-                    </div>
-                    <button class="btn btn-full" style="background-color: #22c55e; color: white;">
-                        Solicitar Saque
-                    </button>
-                    <p style="font-size: 0.75rem; color: var(--muted-foreground); text-align: center; margin-top: 0.5rem;">
-                        Valor mínimo para saque: R$ 50,00
-                    </p>
                 </div>
-            </div>
+
+                <h3 style="margin-top: 40px;">Histórico de Indicações</h3>
+                <ul class="challenge-list">
+                    <li><span class="material-symbols-outlined">person_add</span> Amigo A se cadastrou (Status: Ativo)</li>
+                    <li><span class="material-symbols-outlined">person_add</span> Amigo B se cadastrou (Status: Pendente)</li>
+                    <li><span class="material-symbols-outlined">person_add</span> Amigo C se cadastrou (Status: Ativo)</li>
+                </ul>
+
+                <h3 style="margin-top: 40px;">Ganhos e Saque</h3>
+                <div class="dashboard-stats-grid">
+                    <div class="stat-box">
+                        <div class="label">Ganhos Totais</div>
+                        <div class="value">R$ 320,00</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Disponível para Saque</div>
+                        <div class="value">R$ 180,00</div>
+                    </div>
+                    <div class="stat-box">
+                        <button class="cta-button" style="width: auto; padding: 10px 20px;">Sacar Ganhos</button>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
-    <script src="js/main.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <img src="logo.jpeg" alt="Logo Rodapé" class="logo-footer">
+            <p>&copy; 2025 Vital Recife Suplementos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector(".mobile-menu-icon").addEventListener("click", function() {
+            const nav = document.querySelector(".navbar nav");
+            if (nav) {
+                nav.classList.toggle("active");
+            }
+        });
+
+        document.querySelector(".referral-code-display button").addEventListener("click", function() {
+            const referralInput = document.querySelector(".referral-code-display input");
+            referralInput.select();
+            document.execCommand("copy");
+            alert("Código de indicação copiado!");
+        });
+    </script>
+
 </body>
 </html>
+
