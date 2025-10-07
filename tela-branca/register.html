@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <img src="logo.jpeg" alt="Logo Vital Recife" class="logo">
+            <nav>
+                <a href="ecommerce.html">Catálogo</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="active">Cadastro</a>
+            </nav>
+            <div class="mobile-menu-icon">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content auth-container">
+        <div class="auth-card">
+            <h2>Crie sua conta!</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="********" required>
+                </div>
+                <div class="form-group">
+                    <label for="referralCode">Código de Indicação (Opcional)</label>
+                    <input type="text" id="referralCode" placeholder="Ex: AMIGO123">
+                </div>
+                <button type="submit" class="cta-button">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="logo.jpeg" alt="Logo Rodapé" class="logo-footer">
+            <p>&copy; 2025 Vital Recife Suplementos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector(".mobile-menu-icon").addEventListener("click", function() {
+            const nav = document.querySelector(".navbar nav");
+            if (nav) {
+                nav.classList.toggle("active");
+            }
+        });
+    </script>
+
+</body>
+</html>
+
